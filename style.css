@@ -2,7 +2,11 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,13 +26,17 @@ main {
 
 .container {
   max-width: 250px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+
+  color: var(--grey);
 }
 
 .avatar {
   width: 10rem;
   margin: 11.5rem auto 0;
+
   position: relative;
 }
 
@@ -42,43 +50,41 @@ main {
   width: 10rem;
   height: 11.5rem;
   object-fit: cover;
-  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 h1 {
-  font-size: 24px;
-  color: hsla(240, 9%, 89%, 1);
-  margin-top: 24px;
-  margin-bottom: 9px;
-}
+  font-size: 1.5rem;
 
-.icon {
-  color: hsla(240, 7%, 78%, 1);
-  
-}
-
-p {
-  color: hsla(240, 9%, 89%, 1);
-  font-size: 14px;
-  margin-top: 32px;
-}
-
-ul {
-    margin-top: 64px;
-    padding: 0;
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
+  margin-top: 1.5rem;
 }
 
 a {
+  color: var(--grey);
   text-decoration: none;
+
+  margin-top: 0.25rem;
+
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
+
   justify-content: center;
+  align-items: center;
 }
 
-li {
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
   list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
 }
